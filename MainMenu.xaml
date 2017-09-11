@@ -1,4 +1,4 @@
-﻿<Window x:Class="SkopesStockControl.MainWindow"
+﻿<Window x:Class="SkopesStockControl.MainMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -45,6 +45,17 @@
                     <Button Content="New Order"/>
                     <Button Content="Search Orders"/>
                     <Button Content="Replenishments"/>
+                </StackPanel>
+            </Viewbox>
+            <Label Content="System" FontSize="30" Margin="15,0,0,0"/>
+            <Separator Margin="15,2"/>
+            <Viewbox>
+                <StackPanel Orientation="Horizontal" Margin="15,0">
+                    <Button Content="Tables" Click="Button_Click"/>
+                    <Button Content="Query"/>
+                    <Button Content="Record Search"/>
+                    <Button Content="Add Record"/>
+                    <Button Content="Add Table" Click="Button_Click_1"/>
                 </StackPanel>
             </Viewbox>
         </StackPanel>

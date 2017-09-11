@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SkopesStockControl.Properties
+namespace SkopesStockCont.Properties
 {
 
 

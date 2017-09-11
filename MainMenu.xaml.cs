@@ -12,17 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SkopesStockCont.buttonFunc;
+using System.Data.SqlClient;
+using SkopesStockCont;
 
 namespace SkopesStockControl
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenu : Window
     {
-        public MainWindow()
+        public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {            
+            var resultWindow = new ResultList();
+            resultWindow.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
