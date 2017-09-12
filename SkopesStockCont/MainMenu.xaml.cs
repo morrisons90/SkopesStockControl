@@ -30,7 +30,7 @@ namespace SkopesStockControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {            
-            var resultWindow = new ResultList();
+            var resultWindow = new TableList();
             resultWindow.Show();
         }
 

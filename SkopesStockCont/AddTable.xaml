@@ -1,0 +1,40 @@
+﻿<Window x:Class="SkopesStockCont.AddTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkopesStockCont"
+        mc:Ignorable="d"
+        Title="Window1" Height="400" Width="500">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Table Name" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TableNameBox" Height="23" TextWrapping="Wrap" Width="400" HorizontalAlignment="Left"/>
+            <Label Content="Table Description" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+            <TextBox Height="23" TextWrapping="Wrap" SpellCheck.IsEnabled="True" Width="400" HorizontalAlignment="Left"/>
+            <Label Content="Columns"/>
+        </StackPanel>
+        <DataGrid x:Name="ColumnsDataGrid" Grid.Row="1" HeadersVisibility="Column" HorizontalContentAlignment="Stretch" ColumnWidth="Auto" FrozenColumnCount="1"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Label Content="Column Name" Margin="0,0,5,0"/>
+            <TextBox x:Name="NewColumnName" MinWidth="120" Margin="0,0,5,0" Height="23"/>
+            <Label Content="Columb Type" Margin="0,0,5,0"/>
+            <ComboBox x:Name="NewColumnType" MinWidth="80"  Height="23" Margin="0,0,5,0" Background="{x:Null}" Foreground="Black">
+                <ComboBoxItem Content="Text"/>
+                <ComboBoxItem Content="Int"/>
+            </ComboBox>
+            <Button Click="Button_Click" Content="Add" Height="23" Margin="0,0,5,0"/>
+            <Button Content="Remove" Height="23" Margin="0,0,10,0" Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="23" Grid.Row="3" HorizontalAlignment="Right">
+            <Button x:Name="ConfButton" Content="Create" Width="90" Click="Button_Click_3"/>
+            <Button Content="Cancel" Width="90" Margin="8,0,0,0" Click="Button_Click_2"/>
+        </StackPanel>
+    </Grid>
+</Window>
